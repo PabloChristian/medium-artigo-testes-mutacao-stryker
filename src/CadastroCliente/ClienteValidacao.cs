@@ -6,7 +6,7 @@ namespace CadastroCliente
     {
         public static bool ClienteMaiorIdade(int idade)
         {
-            return idade >= 18;
+            return idade >= 18 && idade < 60;
         }
     }
 }
