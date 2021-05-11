@@ -6,10 +6,22 @@ namespace CadastroClienteTests
 {
     public class ClienteTests
     {
-        [Fact]
-        public void ClienteValidacao_DeveSerMaiorDeIdade()
+        [Theory]
+        [InlineData(18)]
+        [InlineData(19)]
+        [InlineData(30)]
+        public void ClienteValidacao_DeveSerMaiorDeIdade(int idade)
         {
-            Assert.True(ClienteValidacao.DeveSerMaiorDeIdade(10));
+            Assert.True(ClienteValidacao.ClienteMaiorIdade(idade));
+        }
+
+        [Theory]
+        [InlineData(17)]
+        [InlineData(16)]
+        [InlineData(10)]
+        public void ClienteValidacao_DeveSerMenorDeIdade(int idade)
+        {
+            Assert.False(ClienteValidacao.ClienteMaiorIdade(idade));
         }
     }
 }
