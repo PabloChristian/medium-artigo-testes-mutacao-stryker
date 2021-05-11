@@ -20,6 +20,7 @@ namespace CadastroClienteTests
         [InlineData(16)]
         [InlineData(10)]
         [InlineData(61)]
+        [InlineData(60)]
         public void NaoDeveSerMaiorIdade(int idade)
         {
             ClienteValidacao.ClienteMaiorIdade(idade).Should().BeFalse();
