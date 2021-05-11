@@ -1,7 +1,6 @@
 {
   "stryker-config":
   {
-      "test-runner": "vstest",
       "reporters": [ "progress", "html", "json"],
       "log-level": "info",
       "timeout-ms": 15000,
